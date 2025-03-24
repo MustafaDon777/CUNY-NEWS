@@ -23,9 +23,9 @@
     width: 100%;
     max-height: 700px;
     overflow: hidden;
-    border: 1px solid #e0e0e0;
+    border: 1px solid ;
     border-radius: var(--radius);
-    background: #c4d3dd;
+    /* background: ; */
 }
 
 .slider-wrapper {
@@ -35,7 +35,7 @@
 }
 
 .evn {
-    background: var(--secondary);
+    /* background: var(--secondary); */
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     width: 300px; /* Fixed width works well in a row */
@@ -45,7 +45,7 @@
     display: inline-flex;
     flex-direction: column; /* Vertical layout for event details */
     gap: 12px; /* Space between elements */
-    border: 1px solid #e0e0e0;
+    border: 1px solid ;
     overflow: hidden; /* Ensure content fits neatly */
     flex-shrink: 0; /* Prevents shrinking in the row */
 }
@@ -59,7 +59,7 @@
 .evn h5 {
     font-size: 18px;
     font-weight: 600;
-    color: var(--primary);
+    /* color: var(--primary); */
     line-height: 1.5;
     overflow: hidden; /* Hides overflow text */
     text-overflow: ellipsis; /* Adds ellipsis for truncated text */
@@ -68,14 +68,15 @@
 
 .evn p {
     font-size: 14px;
-    color: #555; /* Slightly darker gray for readability */
+     /* Slightly darker gray for readability */
     line-height: 1.5;
 }
 
 .evn a {
     font-size: 14px;
-    color: var(--secondary);
-    background: var(--accent); /* Coral button */
+    /* color: var(--secondary); */
+    /* background: var(--accent); */
+     /* Coral button */
     text-decoration: none;
     font-weight: 500;
     padding: 8px 16px;
@@ -86,7 +87,8 @@
 }
 
 .evn a:hover {
-    background: var(--hover); /* Darker blue on hover */
+    /* background: var(--hover); */
+     /* Darker blue on hover */
     transform: scale(1.05); /* Subtle scale effect */
 }
 
@@ -95,7 +97,7 @@
     content: '';
     width: 50px;
     height: 2px;
-    background: var(--primary);
+    /* background: var(--primary); */
     margin: 10px 0;
 }
 
@@ -111,7 +113,7 @@
     width: 40px;
     height: 40px;
     background: var(--primary);
-    color: #fff;
+    /* color: #fff; */
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -122,7 +124,7 @@
 }
 
 .nav-button:hover:not(:disabled) {
-    background: var(--hover);
+    /* background: var(--hover); */
     opacity: 0.9;
 }
 
