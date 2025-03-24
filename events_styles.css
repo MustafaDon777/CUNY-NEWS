@@ -1,8 +1,8 @@
 .evnHolder{
-    --primary: var(--bloghash-primary);       
+    --primary: rgb(51, 129, 219);       
     /* --secondary: #ffffff;      
-    --accent: #536ea8;         
-    --hover: #357abd;           */
+    --accent: #536ea8;          */
+    --hover: rgb(51, 129, 219);          
     --radius: 12px;            /* Slightly larger radius */
     --shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
     /* --background: linear-gradient(135deg, #f0f4f8, #d9e2ec);  */
