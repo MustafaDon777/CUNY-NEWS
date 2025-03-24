@@ -1,0 +1,55 @@
+    /* Style for the Eventer container */
+    #Eventer {
+        width: 96%;
+        height: 200px;
+        overflow: hidden; /* Hides any overflowing content */
+        border: 1px solid #99999944; /* Black border around the container */
+        border-radius: 10px;
+        display: flex;
+        flex-direction: row; /* Arrange child elements horizontally */
+        overflow-x: scroll; /* Allows horizontal scrolling */
+        padding: 10px;
+        gap: 10px; /* Space between events */
+    }
+
+    /* Style for the individual event elements */
+    .evn {
+        min-width: 290px; /* Slightly smaller than the container for spacing */
+        max-width: 300px;
+        padding: 10px;
+        border: inherit; /* Light border around each event */
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for a 3D effect */
+        background-color: #f9f9f911; /* Light background color */
+        display: flex;
+        flex-direction: column; /* Arrange content vertically */
+        justify-content: space-between;
+    }
+
+    /* Style for event titles */
+    .evn h5 {
+        white-space: nowrap; /* Prevent text from wrapping */
+        overflow: hidden; /* Hide overflow text */
+        text-overflow: ellipsis; /* Add '...' when text overflows */
+        
+        font-size: 15px;
+        margin: 0 0 2px 0; /* Space below the title */
+    }
+
+    /* Style for the event link */
+    .evn a {
+        font-size: 14px;
+        text-decoration: none;
+        margin-top: 10px;
+    }
+
+    /* Change color when hovering over the link */
+    .evn a:hover {
+        text-decoration: underline;
+    }
+
+    /* Style for event text like College, Date, and Time */
+    .evn p {
+        font-size: 12px;
+        margin: 2px 0; /* Space between each line */
+    }

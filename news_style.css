@@ -1,0 +1,78 @@
+
+.gridP {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+.gridP {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+	gap: 10px;
+}
+
+}
+
+.newGridP{
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.gridP-item {
+
+	background-color: rgba(151, 203, 255, 0.1); 
+	color: inherit; 
+	font-family: inherit;  
+	padding: 10px; 
+	border-radius: 10px; 
+	border: solid rgba(112, 112, 112, 0.301) 1px; 
+	margin: 1%; 
+	display: flex; 
+}
+.gridP-item>div {
+	margin: 2%;
+    min-width: 100px;
+}
+
+.imageDP{
+	background-image: url('');
+	width: 250px;
+	height: 200px;
+	background-repeat: no-repeat; 
+	background-size: cover;
+	background-position: center;
+	border-radius: 8px;
+
+}
+
+@keyframes highlightAnimationP {
+	0% {
+		background-color: rgba(151, 203, 255, 0.11); 
+	}
+	10% {
+		background-color: rgba(118, 187, 255, 0.3);
+	}
+	100% {
+		background-color: rgba(151, 203, 255, 0.1); 
+	}
+}
+
+.highlightP {
+	animation: highlightAnimationP 1s ease-in-out forwards; /* Apply animation */
+}
+
+@media (max-width: 600px) {
+    .gridP-item {
+    flex-direction: column; /* Stack children vertically on smaller screens */
+    
+  }
+  .imageDP{
+    align-self: center;
+  }
+
+  .gridP-item>div {
+	margin: 2%;
+    min-width: 100px;
+    
+  }
+}
