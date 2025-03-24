@@ -5,13 +5,13 @@
     --hover: #357abd;           */
     --radius: 12px;            /* Slightly larger radius */
     --shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
-    --background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Subtle gradient */
+    /* --background: linear-gradient(135deg, #f0f4f8, #d9e2ec);  */
 
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 
-    background: #e9f2ff;
+    background: inherit;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,7 +26,7 @@
     overflow: hidden;
     border: 1px solid #e0e0e0;
     border-radius: var(--radius);
-    background: #c4d3dd;
+    background: inherit;
 }
 
 .slider-wrapper {
