@@ -1,8 +1,8 @@
 .evnHolder{
-    --primary: #4187d8;        /* Modern blue */
-    --secondary: #ffffff;      /* Clean white */
-    --accent: #536ea8;         /* Vibrant coral accent */
-    --hover: #357abd;          /* Darker blue for hover */
+    /* --primary: #4187d8;       
+    --secondary: #ffffff;      
+    --accent: #536ea8;         
+    --hover: #357abd;           */
     --radius: 12px;            /* Slightly larger radius */
     --shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
     --background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Subtle gradient */
@@ -11,6 +11,7 @@
     margin: 0;
     padding: 0;
 
+    background: #e9f2ff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -23,9 +24,9 @@
     width: 100%;
     max-height: 700px;
     overflow: hidden;
-    border: 1px solid ;
+    border: 1px solid #e0e0e0;
     border-radius: var(--radius);
-    /* background: ; */
+    background: #c4d3dd;
 }
 
 .slider-wrapper {
@@ -35,7 +36,7 @@
 }
 
 .evn {
-    /* background: var(--secondary); */
+    background: var(--secondary);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     width: 300px; /* Fixed width works well in a row */
@@ -45,7 +46,7 @@
     display: inline-flex;
     flex-direction: column; /* Vertical layout for event details */
     gap: 12px; /* Space between elements */
-    border: 1px solid ;
+    border: 1px solid #e0e0e0;
     overflow: hidden; /* Ensure content fits neatly */
     flex-shrink: 0; /* Prevents shrinking in the row */
 }
@@ -59,7 +60,7 @@
 .evn h5 {
     font-size: 18px;
     font-weight: 600;
-    /* color: var(--primary); */
+    color: var(--primary);
     line-height: 1.5;
     overflow: hidden; /* Hides overflow text */
     text-overflow: ellipsis; /* Adds ellipsis for truncated text */
@@ -68,15 +69,14 @@
 
 .evn p {
     font-size: 14px;
-     /* Slightly darker gray for readability */
+    color: #555; /* Slightly darker gray for readability */
     line-height: 1.5;
 }
 
 .evn a {
     font-size: 14px;
-    /* color: var(--secondary); */
-    /* background: var(--accent); */
-     /* Coral button */
+    color: var(--secondary);
+    background: var(--accent); /* Coral button */
     text-decoration: none;
     font-weight: 500;
     padding: 8px 16px;
@@ -87,8 +87,7 @@
 }
 
 .evn a:hover {
-    /* background: var(--hover); */
-     /* Darker blue on hover */
+    background: var(--hover); /* Darker blue on hover */
     transform: scale(1.05); /* Subtle scale effect */
 }
 
@@ -97,7 +96,7 @@
     content: '';
     width: 50px;
     height: 2px;
-    /* background: var(--primary); */
+    background: var(--primary);
     margin: 10px 0;
 }
 
@@ -113,7 +112,7 @@
     width: 40px;
     height: 40px;
     background: var(--primary);
-    /* color: #fff; */
+    color: #fff;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -124,7 +123,7 @@
 }
 
 .nav-button:hover:not(:disabled) {
-    /* background: var(--hover); */
+    background: var(--hover);
     opacity: 0.9;
 }
 
