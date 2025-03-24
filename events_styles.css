@@ -1,6 +1,6 @@
 .evnHolder{
-    /* --primary: #4187d8;       
-    --secondary: #ffffff;      
+    --primary: var(--bloghash-primary);       
+    /* --secondary: #ffffff;      
     --accent: #536ea8;         
     --hover: #357abd;           */
     --radius: 12px;            /* Slightly larger radius */
