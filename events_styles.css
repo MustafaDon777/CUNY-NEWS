@@ -1,7 +1,7 @@
 .evnHolder{
     --primary: rgb(51, 129, 219);       
-    /* --secondary: #ffffff;      
-    --accent: #536ea8;          */
+    --secondary: inherit;      
+    /* --accent: #536ea8;          */
     --hover: rgb(51, 129, 219);          
     --radius: 12px;            /* Slightly larger radius */
     --shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
@@ -46,7 +46,7 @@
     display: inline-flex;
     flex-direction: column; /* Vertical layout for event details */
     gap: 12px; /* Space between elements */
-    border: 1px solid #e0e0e0;
+    border: 1px solid inherit;
     overflow: hidden; /* Ensure content fits neatly */
     flex-shrink: 0; /* Prevents shrinking in the row */
 }
