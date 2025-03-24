@@ -46,7 +46,8 @@
     display: inline-flex;
     flex-direction: column; /* Vertical layout for event details */
     gap: 12px; /* Space between elements */
-    border: 1px solid inherit;
+    border: 1px solid ;
+    border-color: inherit;
     overflow: hidden; /* Ensure content fits neatly */
     flex-shrink: 0; /* Prevents shrinking in the row */
 }
