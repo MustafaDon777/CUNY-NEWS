@@ -1,55 +1,154 @@
-    /* Style for the Eventer container */
-    #Eventer {
-        width: 96%;
-        height: 220x;
-        overflow: hidden; /* Hides any overflowing content */
-        border: 1px solid #99999944; /* Black border around the container */
-        border-radius: 10px;
-        display: flex;
-        flex-direction: row; /* Arrange child elements horizontally */
-        overflow-x: scroll; /* Allows horizontal scrolling */
-        padding: 10px;
-        gap: 10px; /* Space between events */
+
+.slider-container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    max-height: 700px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+    border-radius: var(--radius);
+    background: #c4d3dd;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.25, 0.1, 0.25, 1);
+    user-select: none;
+}
+
+.evn {
+    background: var(--secondary);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    width: 300px; /* Fixed width works well in a row */
+    padding: 20px;
+    margin: 5px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    flex-direction: column; /* Vertical layout for event details */
+    gap: 12px; /* Space between elements */
+    border: 1px solid #e0e0e0;
+    overflow: hidden; /* Ensure content fits neatly */
+    flex-shrink: 0; /* Prevents shrinking in the row */
+}
+
+.evn:hover {
+    transform: translateY(-6px); /* Slightly larger lift */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary);
+}
+
+.evn h5 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary);
+    line-height: 1.5;
+    overflow: hidden; /* Hides overflow text */
+    text-overflow: ellipsis; /* Adds ellipsis for truncated text */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+}
+
+.evn p {
+    font-size: 14px;
+    color: #555; /* Slightly darker gray for readability */
+    line-height: 1.5;
+}
+
+.evn a {
+    font-size: 14px;
+    color: var(--secondary);
+    background: var(--accent); /* Coral button */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 8px;
+    text-align: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+    align-self: flex-start; /* Align button to start */
+}
+
+.evn a:hover {
+    background: var(--hover); /* Darker blue on hover */
+    transform: scale(1.05); /* Subtle scale effect */
+}
+
+/* Add a subtle divider between content and button */
+.evn::before {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background: var(--primary);
+    margin: 10px 0;
+}
+
+/* Animation for modern feel */
+.evn {
+    animation: fadeIn 0.5s ease-out;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: 0.5s;
+    z-index: 1;
+    opacity: 0.3;
+}
+
+.nav-button:hover:not(:disabled) {
+    background: var(--hover);
+    opacity: 0.9;
+}
+
+.nav-button:disabled {
+    opacity: 0.0;
+    cursor: auto;
+}
+
+.left-button { left: 15px; }
+.right-button { right: 15px; }
+
+@media (max-width: 768px) {
+    .slider-item { flex: 0 0 160px; }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .Eventer { /* Smaller cards on mobile */
+        padding: 15px;
     }
 
-    /* Style for the individual event elements */
     .evn {
-        min-width: 290px; /* Slightly smaller than the container for spacing */
-        max-width: 300px;
-        padding: 10px;
-        border: inherit; /* Light border around each event */
-        border-radius: 8px; /* Rounded corners */
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for a 3D effect */
-        background-color: #f9f9f911; /* Light background color */
-        display: flex;
-        flex-direction: column; /* Arrange content vertically */
-        justify-content: space-between;
+        padding: 15px;
     }
 
-    /* Style for event titles */
     .evn h5 {
-        white-space: nowrap; /* Prevent text from wrapping */
-        overflow: hidden; /* Hide overflow text */
-        text-overflow: ellipsis; /* Add '...' when text overflows */
-        
-        font-size: 15px;
-        margin: 0 0 2px 0; /* Space below the title */
+        font-size: 16px;
     }
 
-    /* Style for the event link */
+    .evn p, .evn a {
+        font-size: 13px;
+    }
+
     .evn a {
-        font-size: 14px;
-        text-decoration: none;
-        margin-top: 10px;
+        padding: 6px 12px;
     }
-
-    /* Change color when hovering over the link */
-    .evn a:hover {
-        text-decoration: underline;
-    }
-
-    /* Style for event text like College, Date, and Time */
-    .evn p {
-        font-size: 12px;
-        margin: 2px 0; /* Space between each line */
-    }
+}
