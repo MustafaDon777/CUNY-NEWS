@@ -1,3 +1,21 @@
+.evnHolder{
+    --primary: #4187d8;        /* Modern blue */
+    --secondary: #ffffff;      /* Clean white */
+    --accent: #536ea8;         /* Vibrant coral accent */
+    --hover: #357abd;          /* Darker blue for hover */
+    --radius: 12px;            /* Slightly larger radius */
+    --shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Softer, larger shadow */
+    --background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Subtle gradient */
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
 
 .slider-container {
     position: relative;
