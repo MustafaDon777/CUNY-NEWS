@@ -45,6 +45,7 @@
 
                  const eventLink = document.createElement('a');
                  eventLink.href = event.link;
+                 eventLink.target = "_blank";
                  eventLink.textContent = 'More Details';
                  eventDiv.appendChild(eventLink);
 
