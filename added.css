@@ -1,0 +1,50 @@
+/* menu items coloring*/
+
+.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-141 > a::before {
+	background-color: #888888;
+	
+}
+
+
+.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-142 > a::before {
+	background-color: #e17100;
+	
+}
+
+
+.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-143 > a::before {
+	background-color: #22bb44;
+	
+}
+
+.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-212 > a::before {
+	background-color: #3355ff;
+	
+}
+
+.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-186 > a::before {
+	background-color: #7700eb;
+	
+}
+
+.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-250 > a::before {
+	
+}
+/*logo rounding*/
+div.logo-inner>a>img{
+	border-radius: 10px;
+	filter: blur(0.5px) brightness(1.2) saturate(100%)  hue-rotate(0deg);
+}
+div.bloghash-breadcrumbs{
+	background-color: #ddffff22;
+	border: black;
+}
+div.h4.widget-title::after{
+	filter: opacity(0%);
+}
+h2.wp-block-heading::after{
+	filter: opacity(0%);
+}
+label.wp-block-search__label::after{
+	filter: opacity(0%);
+}
