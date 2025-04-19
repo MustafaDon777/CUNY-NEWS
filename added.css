@@ -27,9 +27,9 @@
 	
 }
 
-.bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-250 > a::before {
+/* .bloghash-menu-animation-squareboxtwo:not(.bloghash-is-mobile) #bloghash-header-inner .bloghash-nav > ul > li.menu-item-250 > a::before {
 	
-}
+} */
 /*logo rounding*/
 div.logo-inner>a>img{
 	border-radius: 10px;

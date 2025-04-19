@@ -3,3 +3,13 @@ index.html
 eventsPage.html
 slider.js
 eventQuery.html
+
+/articles
+/ai_agent
+/python func
+
+jc.json
+# ignore venv
+env
+venv
+
