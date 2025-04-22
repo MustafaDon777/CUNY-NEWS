@@ -142,6 +142,7 @@
     }
     .article-container .image-container img{
         max-width: 80vw; /* make image responsive */
+        max-height: 500px;
     
     }
 }
