@@ -4,10 +4,18 @@
     color: #333;
     margin: 0 auto;
     padding: 40px 20px;
-    background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 100px;
+}
+
+.article-container .art_head{
+    background-color: #ffffff;
+}
+
+.article-container .art_block{
+    border-radius: 10px;
+    background-color: #ffffff;
 }
 
 .article-container .hero-section {
@@ -25,7 +33,6 @@
     max-width: 100%;
     height: auto;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .hero-section h1 {
@@ -118,6 +125,10 @@
     .article-container .bio img {
         max-width: 120px;
     }
+    
+    .article-container .art_block{
+        padding: 8px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -127,7 +138,7 @@
         align-items: center;
         gap: 30px;
         
-        padding-bottom: 100px;
+        padding-bottom: 50px;
     }
 
     .hero-section .image-container {
@@ -147,5 +158,9 @@
         max-width: 80vw; /* make image responsive */
         max-height: 500px;
     
+    }
+    
+    .article-container .art_block{
+        padding: 80px;
     }
 }
