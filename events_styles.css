@@ -20,13 +20,14 @@
 
 .slider-container {
     position: relative;
-    max-width: 1200px;
-    width: 100%;
+    max-width: 100%;
+    width: 98%;
     max-height: 700px;
     overflow: hidden;
     border: 1px solid #e0e0e0;
     border-radius: var(--radius);
     background: inherit;
+    margin: 1%;
 }
 
 .slider-wrapper {
