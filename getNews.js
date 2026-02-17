@@ -1,99 +1,92 @@
 // Function to create HTML element based on input data
 function createHtmlElement(imageLink, postTitle, description, readMoreLink) {
-    // Create the outer div with class "gridP-item"
     const gridItem = document.createElement('div');
     gridItem.classList.add('gridP-item');
     
-    // Create the image div with the background image set to imageLink
     const imageDiv = document.createElement('div');
     imageDiv.classList.add('imageDP');
     imageDiv.style.backgroundImage = `url(${imageLink})`;
     
-    // Create the inner content div
     const contentDiv = document.createElement('div');
     
-    // Create and append the title (h3)
     const titleElement = document.createElement('h3');
     titleElement.innerText = postTitle;
     
-    // Create and append the description (p)
     const descriptionElement = document.createElement('p');
     descriptionElement.innerText = description;
     
-    // Create and append the "Read more" link (a)
     const readMoreLinkElement = document.createElement('a');
     readMoreLinkElement.href = readMoreLink;
     readMoreLinkElement.target = '_blank';
     readMoreLinkElement.style.color = 'inherit';
     readMoreLinkElement.innerText = 'Read more';
     
-    // Append elements to the content div
     contentDiv.appendChild(titleElement);
     contentDiv.appendChild(descriptionElement);
     contentDiv.appendChild(readMoreLinkElement);
     
-    // Append the image div and content div to the grid item
-    if (imageLink.slice(-3)!="..."){
+    // Safety check for image link
+    if (imageLink && !imageLink.endsWith("...")) {
         gridItem.appendChild(imageDiv);
     }
     gridItem.appendChild(contentDiv);
     
-    // Return the generated HTML element
     return gridItem;
 }
+
 // Function to fetch the JSON data and create HTML elements
 async function fetchAndDisplayNews() {
-    const jsonLink = 'https://mustafadon777.github.io/CUNY-NEWS/cuny_news.json'; // Replace with your actual JSON link
+    const jsonLink = 'https://mustafadon777.github.io/THCN/colleges_data.json'; 
 
     try {
         const response = await fetch(jsonLink);
         const data = await response.json();
 
         const newsContainer = document.getElementById('gridContainer');
-        const collegeName = newsContainer.innerHTML
-        newsContainer.innerHTML = ""
-        // Loop through each item in the "mec" array and create HTML elements
-        data[collegeName].forEach(newsItem => {
-            const [image, title, description, link] = newsItem;
+        // Get the college key (e.g., "bcc") from the container's initial text/ID
+        const collegeKey = newsContainer.innerHTML.trim(); 
+        newsContainer.innerHTML = "";
 
-            // Create HTML elements
-            const newsArticle = createHtmlElement(image, title, description, link)
+        if (data[collegeKey]) {
+            data[collegeKey].forEach(newsItem => {
+                // CHANGED: Destructuring from Object instead of Array
+                const { 
+                    image_reference: image, 
+                    title, 
+                    description, 
+                    read_more_link: link 
+                } = newsItem;
 
-            // Append the news article to the container
-            newsContainer.appendChild(newsArticle);
-        });
+                const newsArticle = createHtmlElement(image, title, description, link);
+                newsContainer.appendChild(newsArticle);
+            });
+        }
     } catch (error) {
         console.error('Error fetching the JSON:', error);
     }
 }
 
-// Call the function to fetch and display the news
 fetchAndDisplayNews();
 
+// --- Search functions remain the same ---
 function searchGrid() {
     const searchTerm = document.getElementById("searchInput").value.toLowerCase();
     const gridItems = document.querySelectorAll(".gridP-item");
 
-    // Reset the grid by removing all previous highlights and orders
     gridItems.forEach(item => {
         item.classList.remove("highlightP");
-        item.style.order = ""; // Reset the order
+        item.style.order = ""; 
     });
 
     let found = false;
-
-    // Loop through each grid item and check if it contains the search term
     gridItems.forEach(item => {
         if (item.textContent.toLowerCase().includes(searchTerm)) {
-            // Highlight the matched item
             item.classList.add("highlightP");
-            // Move the matched item to the top of the grid
-            item.style.order = "-1"; // Move it to the top
+            item.style.order = "-1"; 
             found = true;
         }
     });
 
-    // Scroll the first matched item into view
     if (found) {
         const firstMatchedItem = document.querySelector(".highlightP");
         firstMatchedItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -102,9 +95,8 @@ function searchGrid() {
     }
 }
 
-// Check if the Enter key was pressed
 function checkEnter(event) {
     if (event.key === 'Enter') {
-        searchGrid(); // Call the search function when Enter is pressed
+        searchGrid();
     }
 }
